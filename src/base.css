@@ -7,6 +7,9 @@
   html {
     @apply bg-[#f1f5f9] font-sans;
   }
+  html.dark {
+    @apply bg-[#0d0950] text-white;
+  }
 
   body {
     @apply mx-auto w-full max-w-[80ch] p-4 leading-normal;
@@ -24,5 +27,20 @@
 @layer components {
   .expanded {
     display: unset !important;
+  }
+  .sun {
+    fill: black;
+  }
+  .moon {
+    fill: transparent;
+  }
+  .dark .sun {
+    fill: transparent;
+  }
+  .dark .moon {
+    fill: white;
+  }
+  .dark .nav-links a {
+    color: #fff;
   }
 }

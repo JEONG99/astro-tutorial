@@ -1,5 +1,9 @@
 ---
+import Greeting from "@components/Greeting";
 import Layout from "src/layouts/Layout.astro";
 ---
 
-<Layout pageTitle="Astro" />
+<Layout pageTitle="Home Page">
+  <h2>My awesome blog subtitle</h2>
+  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+</Layout>
