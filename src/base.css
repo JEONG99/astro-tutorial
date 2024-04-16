@@ -1,0 +1,25 @@
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-[#f1f5f9] font-sans;
+  }
+
+  body {
+    @apply mx-auto w-full max-w-[80ch] p-4 leading-normal;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  h1 {
+    @apply my-4 text-[40px];
+  }
+}
+
+@layer components {
+}

@@ -1,4 +1,6 @@
 ---
+import "src/base.css";
+
 const pageTitle = "About Me";
 
 const identity = {
@@ -13,6 +15,8 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const skillColor = "navy";
 ---
 
 <html lang="en">
@@ -27,7 +31,7 @@ const goal = 3;
     <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/blog">Blog</a>
-    <h1>{pageTitle}</h1>
+    <h1 class="text-6xl text-purple-700">{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
     <p>
       I am working through Astro's introductory tutorial. This is the second
@@ -54,7 +58,11 @@ const goal = 3;
     </ul>
     <p>My skills are:</p>
     <ul>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {
+        skills.map((skill) => (
+          <li class="text-uppercase font-bold text-blue-900">{skill}</li>
+        ))
+      }
     </ul>
     {happy && <p>I am happy to be learning Astro!</p>}
     {finished && <p>I finished this tutorial!</p>}
